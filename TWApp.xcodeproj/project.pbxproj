@@ -124,6 +124,8 @@
 		252C7047178A58540022211D /* slider_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C6FDF178A58540022211D /* slider_normal.png */; };
 		252C7048178A58540022211D /* slider_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 252C6FE0178A58540022211D /* slider_normal@2x.png */; };
 		252C7051178A59BA0022211D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 252C7050178A59BA0022211D /* main.m */; };
+		2563150E178C4DC7001A9DEF /* StatusBarLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2563150D178C4DC7001A9DEF /* StatusBarLoading.m */; };
+		25631512178C4DF4001A9DEF /* MTActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 25631511178C4DF4001A9DEF /* MTActivityIndicatorView.m */; };
 		257A21B71787FBEE00DB781E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257A21B61787FBEE00DB781E /* UIKit.framework */; };
 		257A21B91787FBEE00DB781E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257A21B81787FBEE00DB781E /* Foundation.framework */; };
 		257A21BB1787FBEE00DB781E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257A21BA1787FBEE00DB781E /* CoreGraphics.framework */; };
@@ -350,6 +352,10 @@
 		252C6FDF178A58540022211D /* slider_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slider_normal.png; sourceTree = "<group>"; };
 		252C6FE0178A58540022211D /* slider_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slider_normal@2x.png"; sourceTree = "<group>"; };
 		252C7050178A59BA0022211D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2563150C178C4DC7001A9DEF /* StatusBarLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatusBarLoading.h; path = StatusBarLoading/StatusBarLoading.h; sourceTree = "<group>"; };
+		2563150D178C4DC7001A9DEF /* StatusBarLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatusBarLoading.m; path = StatusBarLoading/StatusBarLoading.m; sourceTree = "<group>"; };
+		25631510178C4DF4001A9DEF /* MTActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTActivityIndicatorView.h; sourceTree = "<group>"; };
+		25631511178C4DF4001A9DEF /* MTActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTActivityIndicatorView.m; sourceTree = "<group>"; };
 		257A21B31787FBEE00DB781E /* TWApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257A21B61787FBEE00DB781E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		257A21B81787FBEE00DB781E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -640,6 +646,7 @@
 		252C6F6E178A58540022211D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2563150B178C4AC8001A9DEF /* StatusBarLoading */,
 				252C6F6F178A58540022211D /* AttriButedLabel */,
 				252C6F72178A58540022211D /* BBCyclingLabel */,
 				252C6F75178A58540022211D /* CheckBoxView */,
@@ -927,6 +934,25 @@
 			path = WaveAnimation;
 			sourceTree = "<group>";
 		};
+		2563150B178C4AC8001A9DEF /* StatusBarLoading */ = {
+			isa = PBXGroup;
+			children = (
+				2563150F178C4DF4001A9DEF /* MTActivityIndicatorView */,
+				2563150C178C4DC7001A9DEF /* StatusBarLoading.h */,
+				2563150D178C4DC7001A9DEF /* StatusBarLoading.m */,
+			);
+			name = StatusBarLoading;
+			sourceTree = "<group>";
+		};
+		2563150F178C4DF4001A9DEF /* MTActivityIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				25631510178C4DF4001A9DEF /* MTActivityIndicatorView.h */,
+				25631511178C4DF4001A9DEF /* MTActivityIndicatorView.m */,
+			);
+			path = MTActivityIndicatorView;
+			sourceTree = "<group>";
+		};
 		257A21AA1787FBEE00DB781E = {
 			isa = PBXGroup;
 			children = (
@@ -1173,6 +1199,8 @@
 				251E4536178BAB3800728CAD /* TWLabel.m in Sources */,
 				251E4537178BAB3800728CAD /* TWTextField.m in Sources */,
 				251E4538178BAB3800728CAD /* TWViewController.m in Sources */,
+				2563150E178C4DC7001A9DEF /* StatusBarLoading.m in Sources */,
+				25631512178C4DF4001A9DEF /* MTActivityIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

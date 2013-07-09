@@ -9,6 +9,7 @@
 #import "TestVC.h"
 #import "TestCell.h"
 #import "TableModel.h"
+#import "StatusBarLoading.h"
 
 #define kTestCellIdentifier @"TestCellIdentifier"
 
@@ -31,7 +32,7 @@
     [self setUpdateDataBlock];
     
     self.testModel = [[TableModel alloc] init];
-    [self requestData];
+    [self requestData];    
 }
 
 - (void)viewDidUnload
@@ -100,6 +101,9 @@
 
 - (void)requestData
 {
+    [[StatusBarLoading sharedInstance] setDotColor:[UIColor orangeColor]];
+    [[StatusBarLoading sharedInstance] show];
+
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:5];
     [params setObject:@"32.00935" forKey:@"lat"];
     [params setObject:@"118.7822" forKey:@"lon"];
@@ -119,10 +123,13 @@
          
          [self.tableView reloadData];
          [self.tableView stopPullTableViewRefresh];
+         
+         [[StatusBarLoading sharedInstance] hideAfterDelay:0];
      }
                                  failed:^(NSString *error)
      {
          [self.tableView stopPullTableViewRefresh];
+         [[StatusBarLoading sharedInstance] hideAfterDelay:0];
      }];
 }
 
