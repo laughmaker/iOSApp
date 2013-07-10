@@ -36,5 +36,6 @@
     #import "TWCell.h"
     #import "TableModel.h"
     #import "TWViewController.h"
+    #import "StatusBarLoading.h"
 
 #endif

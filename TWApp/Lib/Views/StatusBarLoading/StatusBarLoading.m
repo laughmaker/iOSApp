@@ -120,14 +120,6 @@ kSingleton(StatusBarLoading)
 - (void)show
 {
     self.hidden = NO;
-    [UIView animateWithDuration:0.5f
-                     animations:^
-     {
-         self.alpha = 1.0;
-     }
-                     completion:^(BOOL finished)
-     {
-     }];
     
     if (self.loadingStyle == kPageControlStyle)
     {
@@ -154,16 +146,7 @@ kSingleton(StatusBarLoading)
     {
         [self.customLoading stopAnimating];
     }
-
-    [UIView animateWithDuration:0.5f
-                     animations:^
-     {
-         self.alpha = 0.0f;
-     }
-                     completion:^(BOOL finished)
-     {
-         self.hidden = YES;
-     }];
+    self.hidden = YES;
 }
 
 
